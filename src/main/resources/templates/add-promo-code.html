@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<body>
+    <div>
+        <form method="POST" enctype="multipart/form-data" action="/addPromoCode">
+            <table>
+                <p>Промокод (максимум 8 символов):<br>
+                    <input type="text" name="promoCode" maxlength="8" required>
+                </p>
+                <p>Статус промокода:<br>
+                    <input type="radio" name="status" value=true required> Включен<br>
+                    <input type="radio" name="status" value=false required> Выключен<br>
+                </p>
+                <p>Описание (максимум 40 символов):<br>
+                    <input type="text" name="title" maxlength="40" required>
+                </p>
+                <p>Условия использования (максимум 200 символов):<br>
+                    <textarea name="comment" cols="40" rows="3" maxlength="200" required></textarea>
+                </p>
+                <p>Изображение: <input type="file" accept="image/*" name="image" required/><br></p>
+                <input type="submit" value="Создать"/>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
